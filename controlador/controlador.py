@@ -3,8 +3,10 @@ import wx.grid as gridlib
 from wx.grid import GridCellAutoWrapStringRenderer
 from hashlib import new
 
-
-class Problem(wx.Frame):
+##
+#creamos nuestra clase en la cual se crea y configura la interfaz grafica
+##
+class Rompecabeza(wx.Frame):
     def __init__(self):
         wx.Frame.__init__(self, None, title="CUERDA FLOJA", style = wx.DEFAULT_FRAME_STYLE & ~(wx.RESIZE_BORDER | wx.MAXIMIZE_BOX),size=(800,600))
         
@@ -32,11 +34,11 @@ class Problem(wx.Frame):
         self.archivo = wx.Menu()
 # Agregamos el sub-menú Guardar
         self.guardar = wx.MenuItem(self.archivo,-1,"Guardar")
-        self.guardar.SetBitmap(wx.Bitmap( u"img/ic_save.png", wx.BITMAP_TYPE_ANY ))
+        self.guardar.SetBitmap(wx.Bitmap("",wx.BITMAP_TYPE_ANY ))
         self.archivo.AppendItem(self.guardar)
 # Agregamos el sub-menú Abrir
         self.abrir = wx.MenuItem(self.archivo,-1,"Abrir")
-        self.abrir.SetBitmap(wx.Bitmap( u"img/ic_open.png", wx.BITMAP_TYPE_ANY ))
+        self.abrir.SetBitmap(wx.Bitmap("", wx.BITMAP_TYPE_ANY ))
         self.archivo.AppendItem(self.abrir)
     
     # Creamos la barra de menú principal y la configuramos

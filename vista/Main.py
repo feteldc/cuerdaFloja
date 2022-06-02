@@ -1,9 +1,9 @@
 import wx
-from controlador.controlador import Problem
+from controlador.controlador import Rompecabeza
  
         
 if __name__ == "__main__":
     app = wx.App()
-    Problem().Show()
+    Rompecabeza().Show()
     app.MainLoop()
     
