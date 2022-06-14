@@ -1,5 +1,5 @@
 import wx
-from controlador import controlador
+from source.controlador import controlador
         
 if __name__ == "__main__":
     app = wx.App()

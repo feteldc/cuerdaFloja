@@ -47,3 +47,4 @@ class Rompecabeza(wx.Frame):
         self.SetMenuBar(self.mb)
         
     
+    
