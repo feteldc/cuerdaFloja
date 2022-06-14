@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import configparser
 
 ##
@@ -14,12 +16,12 @@ class Parce:
     #este metodo lo que hace es 
     ##
     def getConfig(self): 
-        return int(self.Config["DIFICULTY"]["easyRow"]),int(self.Config['DIFICULTY']['easyCol'])
+        return int(self.Config['DIFICULTY']['easyRow']),int(self.Config['DIFICULTY']['easyCol'])
     
 
 ##
 #ahora lo que hacemos es instanciar la clase
 ##
-a = Parce()
+#a = Parce()
 
-print(a.getConfig())
+#print(a.getConfig())

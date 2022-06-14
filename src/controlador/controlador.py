@@ -1,16 +1,24 @@
 import wx
 import wx.grid as gridlib
 from wx.grid import GridCellAutoWrapStringRenderer
-from hashlib import new
 
-##
-#creamos nuestra clase en la cual se crea y configura la interfaz grafica
-##
+'''
+    Esto es un documento
+'''
+
+'''
+    Esto es una clase
+'''
+
 class Rompecabeza(wx.Frame):
     def __init__(self):
+        '''
+        :param: title:esta clase crea una ventana que contiene los botones de gran parte del juego como las dificultades a las que se podra
+        seleccionar,ademas tener el boton de guardar y iniciar partida,la seleccion de imagen aun esta en desarrollo
+        '''
+
         wx.Frame.__init__(self, None, title="CUERDA FLOJA", style = wx.DEFAULT_FRAME_STYLE & ~(wx.RESIZE_BORDER | wx.MAXIMIZE_BOX),size=(800,600))
-        
-       
+      
         self.panel = wx.Panel(self)
         
         self.box1 = wx.StaticBox(self.panel, wx.ID_ANY, pos=(10,0),size=(760, 680))
@@ -32,16 +40,16 @@ class Rompecabeza(wx.Frame):
         self.grid.CreateGrid(0, 2)
         
         self.archivo = wx.Menu()
-# Agregamos el sub-menú Guardar
+# Agregamos el sub-menu Guardar
         self.guardar = wx.MenuItem(self.archivo,-1,"Guardar")
         self.guardar.SetBitmap(wx.Bitmap("",wx.BITMAP_TYPE_ANY ))
         self.archivo.AppendItem(self.guardar)
-# Agregamos el sub-menú Abrir
+# Agregamos el sub-menu Abrir
         self.abrir = wx.MenuItem(self.archivo,-1,"Abrir")
         self.abrir.SetBitmap(wx.Bitmap("", wx.BITMAP_TYPE_ANY ))
         self.archivo.AppendItem(self.abrir)
     
-    # Creamos la barra de menú principal y la configuramos
+    # Creamos la barra de menu principal y la configuramos
         self.mb = wx.MenuBar()
         self.mb.Append(self.archivo, "Archivo")
         self.SetMenuBar(self.mb)
