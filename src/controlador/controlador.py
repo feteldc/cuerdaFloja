@@ -40,11 +40,11 @@ class Rompecabeza(wx.Frame):
         self.grid.CreateGrid(0, 2)
         
         self.archivo = wx.Menu()
-# Agregamos el sub-menu Guardar
+    # Agregamos el sub-menu Guardar
         self.guardar = wx.MenuItem(self.archivo,-1,"Guardar")
         self.guardar.SetBitmap(wx.Bitmap("",wx.BITMAP_TYPE_ANY ))
         self.archivo.AppendItem(self.guardar)
-# Agregamos el sub-menu Abrir
+    # Agregamos el sub-menu Abrir
         self.abrir = wx.MenuItem(self.archivo,-1,"Abrir")
         self.abrir.SetBitmap(wx.Bitmap("", wx.BITMAP_TYPE_ANY ))
         self.archivo.AppendItem(self.abrir)
@@ -53,6 +53,4 @@ class Rompecabeza(wx.Frame):
         self.mb = wx.MenuBar()
         self.mb.Append(self.archivo, "Archivo")
         self.SetMenuBar(self.mb)
-        
-    
-    
+
